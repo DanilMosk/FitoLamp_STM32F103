@@ -69,9 +69,10 @@ private:
 			data.Minutes -= 60;
 		if(data.Hours > 23)
 		{
-			data.Hours = 0;
-			if(data.Seconds > 100)
+			if(data.Hours > 100)
 				data.Hours = 23;
+			else
+				data.Hours = 0;
 		}
 	}
 public:
